@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tailwindcss -i ./input.css -o ./css/output.css",
+    "watch": "tailwindcss -i ./input.css -o ./views/assets/css/output.css --watch"
   },
   "author": "",
   "license": "ISC",
@@ -12,6 +14,7 @@
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.3"
   }
 }
