@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body>
+    <div class="bg-white">
+        <nav>
+            <div id="menu" class="hidden fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
+                <div class="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+                    <div class="px-4 pt-5 pb-2 flex">
+                        <button type="button" onclick="closeMenu()"
+                            class="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400">
+                            <span class="sr-only">Close menu</span>
+                            <!-- Heroicon name: outline/x -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+                        <div class="flow-root">
+                            <a href="/" class="-m-2 p-2 block font-medium text-gray-900">Home</a>
+                        </div>
+
+                        <div class="flow-root">
+                            <a href="/order-history.html" class="-m-2 p-2 block font-medium text-gray-900">Order
+                                History</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <header class="relative bg-white">
+                <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="border-b border-gray-200">
+                        <div class="h-16 flex items-center justify-between">
+                            <div class="flex-1 flex items-center lg:hidden">
+                                <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+                                <button type="button" onclick="openMenu()" class=" -ml-2 bg-white p-2 rounded-md
+                                    text-gray-400">
+                                    <span class="sr-only">Open menu</span>
+                                    <!-- Heroicon name: outline/menu -->
+                                    <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16" />
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <!-- Flyout menus -->
+                            <div class="hidden lg:flex-1 lg:block lg:self-stretch">
+                                <div class="h-full flex space-x-8">
+                                    <a href="/"
+                                        class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Home</a>
+                                    <a href="order-history.html"
+                                        class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Order
+                                        History</a>
+                                </div>
+                            </div>
+
+                            <!-- Logo -->
+                            <a href="/" class="flex">
+                                <span class="text-xl font-bold text-indigo-700">Chuddi Buddy</span>
+                            </a>
+
+                            <div class="flex-1 flex items-center justify-end">
+                                <!-- Cart -->
+                                <div class="ml-4 flow-root lg:ml-6">
+                                    <a href="#" class="group -m-2 p-2 flex items-center">
+                                        <!-- Heroicon name: outline/shopping-bag -->
+                                        <svg class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor" aria-hidden="true">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                        </svg>
+                                        <span
+                                            class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                                        <span class="sr-only">items in cart, view bag</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+        </nav>
+
+        <main class="max-w-2xl mx-auto py-24 px-4 sm:px-6 lg:max-w-7xl lg:px-8" aria-labelledby="order-history-heading">
+            <div class="max-w-xl">
+                <h1 id="order-history-heading" class="text-3xl font-extrabold tracking-tight text-gray-900">Order
+                    history</h1>
+                <p class="mt-2 text-sm text-gray-500">Check the status of recent orders, manage returns, and discover
+                    similar products.</p>
+            </div>
+
+            <div
+                class="mt-16 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 sm:gap-y-16 lg:grid-cols-3 lg:gap-x-8 xl:grid-cols-4">
+                <div class="relative">
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden">
+                        <img src="images/men styles.png"
+                            alt="Black fabric shoe bag with zipper around 3 sides, holding pair of white sneakers."
+                            class="object-center object-cover">
+                    </div>
+                    <h3 class="mt-4 text-sm text-gray-500">
+                        Pack of 5 Briefs
+                    </h3>
+                    <p class="mt-1 text-lg font-medium">
+                        <span class="text-indigo-600">Out for delivery</span>
+                    </p>
+                    <div class="pt-2 flex flex-row gap-3">
+                        <a href="order-submit.html"
+                            class="rounded px-3 py-1 border border-gray-900 hover:bg-gray-50">Details</a>
+                    </div>
+                </div>
+
+
+                <div class="group relative">
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
+                        <img src="images/wb1.png"
+                            alt="Light grey canvas backpack with black handle, zipper, and edge details."
+                            class="object-center object-cover">
+                    </div>
+                    <h3 class="mt-4 text-sm text-gray-500">
+                        <a href="#">
+                            Non-padded Red Bra
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-lg font-medium">
+                        <span class="text-gray-900">Delivered on <time datetime="2021-06-21">June 21, 2021</time></span>
+                    </p>
+                    <div class="pt-2 flex flex-row gap-3">
+                        <a href="order-submit.html"
+                            class="rounded px-3 py-1 border border-gray-900 hover:bg-gray-50">Details</a>
+                        <a href="return.html"
+                            class="rounded px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white">Return
+                            after Use</a>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
+                        <img src="images/Men Uw 1.png"
+                            alt="Orange canvas cylindrical bag with drawstring top, front zipper pouch, and black shoulder strap."
+                            class="object-center object-cover">
+                    </div>
+                    <h3 class="mt-4 text-sm text-gray-500">
+                        <a href="#">
+                            Charcoal Solid Underwear
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-lg font-medium">
+                        <span class="text-gray-900">Delivered on <time datetime="2021-06-21">June 30, 2021</time></span>
+                    </p>
+                    <div class="pt-2 flex flex-row gap-3">
+                        <a href="order-submit.html"
+                            class="rounded px-3 py-1 border border-gray-900 hover:bg-gray-50">Details</a>
+                        <a href="return.html"
+                            class="rounded px-3 py-1 bg-indigo-600 hover:bg-indigo-700 text-white">Return
+                            after Use</a>
+                    </div>
+                </div>
+
+                <div class="group relative">
+                    <div class="aspect-w-1 aspect-h-1 bg-gray-200 rounded-md overflow-hidden group-hover:opacity-75">
+                        <img src="images/wuw1.png"
+                            alt="White canvas tote bag with black drawstring liner and white handle."
+                            class="object-center object-cover">
+                    </div>
+                    <h3 class="mt-4 text-sm text-gray-500">
+                        <a href="#">
+                            Multi-coloured underwear
+                        </a>
+                    </h3>
+                    <p class="mt-1 text-lg font-medium">
+                        <span class="text-gray-700">Recycled for 10% off</span>
+                    </p>
+                    <div class="pt-2 flex flex-row gap-3">
+                        <a href="order-submit.html"
+                            class="rounded px-3 py-1 border border-gray-900 hover:bg-gray-50">Details</a>
+                    </div>
+                </div>
+
+                <!-- More orders... -->
+            </div>
+        </main>
+
+        <footer aria-labelledby="footer-heading">
+            <h2 id="footer-heading" class="sr-only">Footer</h2>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="border-t border-gray-100 py-10 text-center">
+                    <p class="text-sm text-gray-500">&copy; 2023 Chuddi Buddy, Inc. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

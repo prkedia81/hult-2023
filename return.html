@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return</title>
+    <link rel="stylesheet" href="css/output.css">
+</head>
+
+<body>
+    <nav>
+        <div id="menu" class="hidden fixed inset-0 flex z-40 lg:hidden" role="dialog" aria-modal="true">
+            <div class="relative max-w-xs w-full bg-white shadow-xl pb-12 flex flex-col overflow-y-auto">
+                <div class="px-4 pt-5 pb-2 flex">
+                    <button type="button" onclick="closeMenu()"
+                        class="-m-2 p-2 rounded-md inline-flex items-center justify-center text-gray-400">
+                        <span class="sr-only">Close menu</span>
+                        <!-- Heroicon name: outline/x -->
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="border-t border-gray-200 py-6 px-4 space-y-6">
+                    <div class="flow-root">
+                        <a href="/" class="-m-2 p-2 block font-medium text-gray-900">Home</a>
+                    </div>
+
+                    <div class="flow-root">
+                        <a href="/order-history.html" class="-m-2 p-2 block font-medium text-gray-900">Order
+                            History</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <header class="relative bg-white">
+            <nav aria-label="Top" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="border-b border-gray-200">
+                    <div class="h-16 flex items-center justify-between">
+                        <div class="flex-1 flex items-center lg:hidden">
+                            <!-- Mobile menu toggle, controls the 'mobileMenuOpen' state. -->
+                            <button type="button" onclick="openMenu()" class=" -ml-2 bg-white p-2 rounded-md
+                                text-gray-400">
+                                <span class="sr-only">Open menu</span>
+                                <!-- Heroicon name: outline/menu -->
+                                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" aria-hidden="true">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16M4 18h16" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Flyout menus -->
+                        <div class="hidden lg:flex-1 lg:block lg:self-stretch">
+                            <div class="h-full flex space-x-8">
+                                <a href="/"
+                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Home</a>
+                                <a href="order-history.html"
+                                    class="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800">Order
+                                    History</a>
+                            </div>
+                        </div>
+
+                        <!-- Logo -->
+                        <a href="/" class="flex">
+                            <span class="text-xl font-bold text-indigo-700">Chuddi Buddy</span>
+                        </a>
+
+                        <div class="flex-1 flex items-center justify-end">
+                            <!-- Cart -->
+                            <div class="ml-4 flow-root lg:ml-6">
+                                <a href="#" class="group -m-2 p-2 flex items-center">
+                                    <!-- Heroicon name: outline/shopping-bag -->
+                                    <svg class="flex-shrink-0 h-6 w-6 text-gray-400 group-hover:text-gray-500"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke="currentColor" aria-hidden="true">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                                    </svg>
+                                    <span
+                                        class="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
+                                    <span class="sr-only">items in cart, view bag</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </nav>
+
+    <main class="bg-white px-4 pt-16 pb-24 sm:px-6 sm:pt-24 lg:px-8 lg:py-32">
+        <div class="max-w-3xl mx-auto">
+            <div class="max-w-xl">
+                <h1 class="text-sm font-semibold uppercase tracking-wide text-indigo-600">Thank you!</h1>
+                <p class="mt-2 text-4xl font-extrabold tracking-tight sm:text-5xl">You just saved the environment!</p>
+                <p class="mt-2 text-base text-gray-500">Your order #14034056 has been collected and will be recycled
+                    soon.</p>
+
+                <dl class="mt-12 text-sm font-medium">
+                    <dt class="text-gray-900">Tracking number</dt>
+                    <dd class="text-indigo-600 mt-2">51547878755545848512</dd>
+                </dl>
+            </div>
+
+            <section aria-labelledby="order-heading" class="mt-10 border-t border-gray-200">
+                <h2 id="order-heading" class="sr-only">Your order</h2>
+
+                <h3 class="sr-only">Items</h3>
+
+                <div class="py-10 border-b border-gray-200 flex space-x-6">
+                    <img src="images/wb1.png" alt="Glass bottle with black plastic pour top and mesh insert."
+                        class="flex-none w-20 h-20 object-center object-cover bg-gray-100 rounded-lg sm:w-40 sm:h-40">
+                    <div class="flex-auto flex flex-col">
+                        <div>
+                            <h4 class="font-medium text-gray-900">
+                                <a href="#"> <Pick-Up></Pick-Up> </a>
+                            </h4>
+                            <p class="mt-2 text-sm text-gray-600">Thank you for choosing sustainability along with
+                                comfort. The benefit of using Chaddi Buddy is that you no longer have to compromise on
+                                your wallet or your comfort to help the environment!</p>
+                        </div>
+                        <div class="mt-6 flex-1 flex items-end">
+                            <dl class="flex text-sm divide-x divide-gray-200 space-x-4 sm:space-x-6">
+                                <div class="flex">
+                                    <dt class="font-medium text-gray-900">Quantity</dt>
+                                    <dd class="ml-2 text-gray-700">1</dd>
+                                </div>
+                                <div class="pl-4 flex sm:pl-6">
+                                    <dt class="font-medium text-gray-900">Price</dt>
+                                    <dd class="ml-2 text-gray-700">10% off</dd>
+                                </div>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sm:ml-40 sm:pl-6">
+                    <h3 class="sr-only">Your information</h3>
+
+                    <h4 class="sr-only">Addresses</h4>
+                    <dl class="grid grid-cols-2 gap-x-6 text-sm py-10">
+                        <div>
+                            <dt class="font-medium text-gray-900">Shipping address</dt>
+                            <dd class="mt-2 text-gray-700">
+                                <address class="not-italic">
+                                    <span class="block">Kristin Watson</span>
+                                    <span class="block">7363 Cynthia Pass</span>
+                                    <span class="block">Toronto, ON N3Y 4H8</span>
+                                </address>
+                            </dd>
+                        </div>
+                        <div>
+                            <dt class="font-medium text-gray-900">Billing address</dt>
+                            <dd class="mt-2 text-gray-700">
+                                <address class="not-italic">
+                                    <span class="block">Kristin Watson</span>
+                                    <span class="block">7363 Cynthia Pass</span>
+                                    <span class="block">Toronto, ON N3Y 4H8</span>
+                                </address>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer aria-labelledby="footer-heading">
+        <h2 id="footer-heading" class="sr-only">Footer</h2>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="border-t border-gray-100 py-10 text-center">
+                <p class="text-sm text-gray-500">&copy; 2023 Chuddi Buddy, Inc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
